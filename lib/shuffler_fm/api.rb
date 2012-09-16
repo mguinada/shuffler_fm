@@ -37,10 +37,14 @@ module ShufflerFM
 
     # Requests a list of all tracks
     #
+    # @param [Hash] opts options:
+    #
+    # :page - The page to request on paginated operation responses
+    #
     # @return [Array] a list of tracks
     #
-    def tracks
-      get("/tracks")
+    def tracks(opts = {})
+      get("/tracks", page: Integer(opts.fetch(:page) { 1 }))
     end
   end
 end

@@ -3,7 +3,8 @@ describe ShufflerFM::API do
   let!(:api) { ShufflerFM::API.new(KEY) }
 
   it 'lists tracks' do
-    api.tracks.should_not be_empty
+    api.tracks.size.should be(50)
+    api.tracks(page: 2).size.should be(50)
   end
 
   context 'on invalid api key' do

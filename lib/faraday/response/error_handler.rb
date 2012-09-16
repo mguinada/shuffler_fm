@@ -5,11 +5,7 @@ require 'multi_json'
 module Faraday
   # @private
   class Response::ErrorHandler < Faraday::Response::Middleware
-    #INVALID_KEY_MESSAGE = "That API-key is invalid my dear friend."
     def on_complete(response)
-      #binding.pry
-      #raise ShufflerFM::InvalidKey, INVALID_KEY_MESSAGE if response == INVALID_KEY_MESSAGE
-
       case response[:status].to_i
       when 400
         raise ShufflerFM::BadRequest, error_message(response)
