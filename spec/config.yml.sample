@@ -1,1 +1,2 @@
+#Set to your api key from shuffle.fm and rename this file to config.yml! Run rspec or rake spec
 key: 'A KEY'

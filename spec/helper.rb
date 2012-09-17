@@ -24,8 +24,9 @@ end
 
 # setup VCR
 VCR.configure do |cfg|
+  cfg.filter_sensitive_data('<api-key>') { KEY }
   cfg.default_cassette_options = { :record => :new_episodes,
-                                   :re_record_interval => 7 * 24 * 60 * 60 } #7 days in seconds
+                                   :re_record_interval => 7 * 24 * 60 * 60 }
   cfg.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   cfg.hook_into :webmock
 end

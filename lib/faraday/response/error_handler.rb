@@ -31,7 +31,7 @@ module Faraday
     end
 
     def error_message(response)
-      msg = response[:body].empty? ? "" : response[:body]
+      msg = response[:body].nil? ? "" : response[:body]
       msg = "The requested URL was not found on the server." if response[:status].to_i == 404
       "#{response[:method].to_s.upcase} #{response[:url].to_s}: #{response[:status]} #{msg}"
     end
