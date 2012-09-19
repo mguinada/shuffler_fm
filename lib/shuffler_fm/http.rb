@@ -2,13 +2,14 @@ require 'faraday'
 require 'faraday_middleware'
 require 'faraday/response/error_handler'
 
-#TODO: set timeouts
-#TODO: set proxy
 module ShufflerFM
   # @private
   module HTTP
     def connection
-      Faraday.new({url: ShufflerFM::API.base_uri, params: {'api-key' => key}}) do |builder|
+      options = {url: ShufflerFM::API.base_uri,
+                 params: {'api-key' => key}}.merge(ShufflerFM.configuration.values)
+
+      Faraday.new(options) do |builder|
         builder.use FaradayMiddleware::Mashify
         builder.use FaradayMiddleware::ParseJson
 

@@ -11,24 +11,30 @@ module ShufflerFM
     include ShufflerFM::Request
 
     class << self
-      # The REST API endpoint
-      #
+      # @!attribute [r] base_uri
+      #   The REST API endpoint
       def base_uri
         BASE_URI
       end
 
-      # The API version
-      #
+      # @!attribute [r] version
+      #   The API version
       def version
         VERSION
       end
     end
 
+    # @!attribute [rw] key
+    #   The API key
     attr_reader :key
 
     # Creates an API instance
     #
     # @param [String] key An api key provided by http://shuffler.fm
+    #
+    # @example get an API instance
+    #   api = ShufflerFM::API.new("your-api-key")
+    #   api.tracks # gets 1st page of the track list
     #
     def initialize(key)
       raise ArgumentError, 'An API key must be provided' if key.nil?
