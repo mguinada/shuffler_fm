@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Miguel Guinada"]
   gem.email         = ["mguinada@gmail.com"]
   gem.description   = %q{ Ruby API wrapper for http://shuffler.fm }
-  gem.summary       = %q{ Ruby API wrapper for http://shuffler.fm }
+  gem.summary       = %q{ shuffler_fm wraps shuffler.fm's REST api on a thin layer of ruby. }
   gem.homepage      = ""
   gem.date          = Time.now.utc.strftime("%Y-%m-%d")
 

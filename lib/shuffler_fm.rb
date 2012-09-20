@@ -55,7 +55,7 @@ module ShufflerFM
     #   ShufflerFM.configure do |config|
     #     config.connection_timeout = 1 #seconds
     #     config.read_timeout       = 5 #seconds
-    #     config.proxy              = 'http://192.168.1.1:8080'
+    #     config.proxy              = { uri: 'http://192.168.1.1:8080', user: 'user1', password: 'passwd'}
     #   end
     #
     def configure
