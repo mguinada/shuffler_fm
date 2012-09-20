@@ -24,12 +24,12 @@ module ShufflerFM
     #
     #   @option configuration [Integer] :connection_timeout The connection timeout in seconds. Defaults to 2.
     #   @option configuration [Integer] :read_timeout The open/read timeout in seconds. Defaults to 5.
-    #   @option configuration [String]  :proxy The proxy. Is unset by default.
+    #   @option configuration [String]  :proxy The proxy. Is unset by default. (e.g. 'http://192.168.1.1:8080')
     #
     #   @return [ShufflerFM::API]
     #
     #   @example
-    #     api = ShufflerFM.api("your-api-key", connection_timeout: 2, read_timeout: 3, proxy: '192.168.1.1')
+    #     api = ShufflerFM.api("your-api-key", connection_timeout: 2, read_timeout: 3, proxy: 'http://192.168.1.1:8080')
     #     api.tracks # gets 1st page of the track list
     #
     # @see ShufflerFM.configure

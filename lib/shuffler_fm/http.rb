@@ -1,6 +1,6 @@
 require 'faraday'
 require 'faraday_middleware'
-require 'faraday/response/error_handler'
+require 'shuffler_fm/middleware/error_handler'
 
 module ShufflerFM
   # @private
@@ -13,7 +13,7 @@ module ShufflerFM
         builder.use FaradayMiddleware::Mashify
         builder.use FaradayMiddleware::ParseJson
 
-        builder.use Faraday::Response::ErrorHandler
+        builder.use ShufflerFM::Middleware::ErrorHandler
 
         builder.adapter Faraday.default_adapter
       end

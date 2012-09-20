@@ -19,6 +19,12 @@ task :console do
   end
 end
 
+desc "Generate documentation"
+YARD::Rake::YardocTask.new do |t|
+  t.files   = ['lib/**/*.rb', 'README.md']
+  t.options = ['--no-private', '--protected']
+end
+
 #
 # Determins if a gem is available at the current runtime
 #
