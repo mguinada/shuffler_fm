@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   #package
   gem.add_dependency 'faraday',            '~> 0.8'
   gem.add_dependency 'faraday_middleware', '~> 0.8'
-  gem.add_dependency 'hashie',             '~> 1.2'
+  gem.add_dependency 'rash',               '~> 0.3'
   gem.add_dependency 'multi_json',         '~> 1.3'
 
   #development
@@ -31,4 +31,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'vcr'
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'yard'
+  gem.add_development_dependency 'maruku'
 end

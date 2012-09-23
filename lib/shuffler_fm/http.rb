@@ -10,7 +10,7 @@ module ShufflerFM
                  params: {'api-key' => key}}.merge(ShufflerFM.configuration.values)
 
       Faraday.new(options) do |builder|
-        builder.use FaradayMiddleware::Mashify
+        builder.use FaradayMiddleware::Rashify
         builder.use FaradayMiddleware::ParseJson
 
         builder.use ShufflerFM::Middleware::ErrorHandler

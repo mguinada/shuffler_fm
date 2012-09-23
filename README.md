@@ -1,6 +1,11 @@
 # ShufflerFm
 
-TODO: Write a gem description
+Ruby API wrapper for [shuffler.fm API](http://developers.shuffler.fm/)
+
+## Notice
+
+This project is not at is productive state yet. Not all of shuffler.fm API is implemented
+and current implementation may be subject of change.
 
 ## Installation
 
@@ -18,12 +23,47 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Get a track data
+```ruby
+require 'shuffler_fm'
+
+# Get and API key from http://shuffler.fm/developers
+api = ShufflerFM.api('YOUR-KEY')
+
+t = api.tracks.first
+
+t.metadata.title
+=> "My Head"
+
+t.metadata.artist.name
+=> "Mock & Toof"
+```
+
+### Get a channel activity stream
+```ruby
+c = api.genre_channels('punk', 'rock', page: 2).first
+
+c.actor.object_type
+=> "blog"
+c.verb
+=> "post"
+c.object.object_type
+=> "track"
+c.target.object_type
+=> "blog_post"
+```
 
 ## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+3. Hack it
+4. Add tests and make sure everything still passes by running rake
+5. Do not change the version number, we will do that on our end
+6. Commit your changes (`git commit -am 'Add some feature'`)
+7. Push to the branch (`git push origin my-new-feature`)
+8. Send a pull request for your branch
+
+## Influence
+
+This API wrapper design is strongly influenced by [Wynn Netherland's](https://github.com/pengwynn) [Ocktokit gem](https://github.com/pengwynn/octokit)

@@ -21,8 +21,8 @@ end
 
 desc "Generate documentation"
 YARD::Rake::YardocTask.new do |t|
-  t.files   = ['lib/**/*.rb', 'README.md']
-  t.options = ['--no-private', '--protected']
+  t.files   = ['README.md', 'LICENSE.md', 'lib/**/*.rb' ]
+  t.options = ['--no-private', '--protected', '--markup', 'markdown',]
 end
 
 #

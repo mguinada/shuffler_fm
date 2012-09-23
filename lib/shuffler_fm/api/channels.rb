@@ -33,7 +33,6 @@ module ShufflerFM
         channel(:blog, key, options)
       end
 
-
       # Reads the artist channels activity stream
       #
       # @param key The channel key.
@@ -56,8 +55,8 @@ module ShufflerFM
       # @return [Array] an array with the channel's activity stream
       #
       # @example
-      #    api.artist_channels('rock')
-      #    api.artist_channels('uk', 'garage', page: 2)
+      #    api.genre_channels('rock')
+      #    api.genre_channels('punk', 'rock', page: 2)
       #
       def genre_channels(*keys)
         channel(:genre, *keys)
