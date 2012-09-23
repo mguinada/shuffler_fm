@@ -1,6 +1,5 @@
 # ShufflerFM
-
-[![Build Status](https://secure.travis-ci.org/mguinada/shuffler_fm.png)](http://travis-ci.org/mguinada/shuffler_fm)
+[![Build Status](https://secure.travis-ci.org/mguinada/shuffler_fm.png?branch=master)](http://travis-ci.org/mguinada/shuffler_fm)
 [![Dependency Status](https://gemnasium.com/mguinada/shuffler_fm.png)](https://gemnasium.com/mguinada/shuffler_fm)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/mguinada/shuffler_fm)
 
