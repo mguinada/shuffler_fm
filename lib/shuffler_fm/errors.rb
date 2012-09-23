@@ -20,6 +20,9 @@ module ShufflerFM
   # Raised on the advent of a 422 HTTP status code
   class UnprocessableEntity < Error; end
 
+  # Raised on the advent of a 429 HTTP status code
+  class TooManyRequests < Error; end
+
   # Raised on the advent of a 500 HTTP status code
   class InternalServerError < Error; end
 

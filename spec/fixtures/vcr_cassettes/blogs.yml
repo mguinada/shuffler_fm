@@ -613,4 +613,102 @@ http_interactions:
       string: "[]"
     http_version: 
   recorded_at: Sun, 23 Sep 2012 13:23:51 GMT
+- request: 
+    method: get
+    uri: http://api.shuffler.fm/v1/blogs?api-key=<api-key>&page=1&filter=featured
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: {}
+
+  response: 
+    status: 
+      code: 200
+      message: 
+    headers: 
+      content-type: 
+      - application/json
+      content-length: 
+      - "2745"
+      vary: 
+      - Accept-Encoding
+      server: 
+      - TornadoServer/2.4
+    body: 
+      encoding: US-ASCII
+      string: "[{\"about\": \"Slingin' music since 2009 / Founder of Forest Family Records.\", \"updated_at\": \"2012-09-23T15:04:55\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/46/weeklytapedeck_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 46, \"permalink\": \"weekly-tape-deck\", \"statistics\": {\"tracks\": {\"favorited\": 5, \"total\": 283}, \"followers\": 92}, \"title\": \"Weekly Tape Deck\", \"url\": \"http://weeklytapedeck.com\", \"profiles\": {\"twitter\": \"@weeklytapedeck\", \"facebook\": null}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:46?api-key=<api-key>\", \"genres\": [\"experimental\", \"hip-hop\", \"lo-fi\"]}, {\"about\": \"Music Evangelist. Baltimore/DC-based music-blog where I share my taste in sounds & visuals. I appreciate bands and artists that kill it.\", \"updated_at\": \"2012-09-22T23:34:58\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/868/headunderwater_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 868, \"permalink\": \"head-underwater\", \"statistics\": {\"tracks\": {\"favorited\": 17, \"total\": 118}, \"followers\": 56}, \"title\": \"Head Underwater\", \"url\": \"http://www.headunderwater.com/\", \"profiles\": {\"twitter\": \"@jimmy_morris\", \"facebook\": \"http://www.facebook.com/headunderwaterblog\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:868?api-key=<api-key>\", \"genres\": [\"indie\", \"psychedelic rock\", \"female vocalists\"]}, {\"about\": \"HearYa is an indie music blog that gives indie music enthusiasts a destination to cut through the clutter when discovering new music. We\\u2019re a community of fans that want to see the music we love reach the ears of new friends and survive. Your thoughts and comments are always welcomed and encouraged. In addition to providing album reviews, South By Southwest coverage, and offering daily mp3 downloads, we also record live sessions at Shirk Music and Sound in downtown Chicago.\", \"updated_at\": \"2012-09-23T15:05:05\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/265/hearya_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 265, \"permalink\": \"hearya\", \"statistics\": {\"tracks\": {\"favorited\": 32, \"total\": 802}, \"followers\": 82}, \"title\": \"HearYa\", \"url\": \"http://www.hearya.com\", \"profiles\": {\"twitter\": \"@hearya\", \"facebook\": \"https://www.facebook.com/hearya\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:265?api-key=<api-key>\", \"genres\": [\"folk\", \"indie\", \"alt-country\"]}, {\"about\": \"Music for the modern enthusiast. LFTF was founded in 2008 with the simple vision of having a communal place to rave about the music we love. Since then, nothing's changed.\", \"updated_at\": \"2012-09-22T23:09:44\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/1493/liveforthefunk_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 1493, \"permalink\": \"live-for-the-funk\", \"statistics\": {\"tracks\": {\"favorited\": 25, \"total\": 1311}, \"followers\": 105}, \"title\": \"LIVE FOR THE FUNK\", \"url\": \"http://www.liveforthefunk.com\", \"profiles\": {\"twitter\": \"@lftfblog\", \"facebook\": \"https://www.facebook.com/LFTFMAG\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:1493?api-key=<api-key>\", \"genres\": [\"electronic\", \"dubstep\", \"hip-hop\"]}, {\"about\": \"Totally Free beats & pieces, by artists you\\u2019ll soon know.\\r\\n\\r\\nBi-weekly live radio show Monday night 12-2am GMT (4-6pm PDT) on NTS Live\", \"updated_at\": \"2012-09-23T15:05:03\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/645/youllsoonknow_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 645, \"permalink\": \"youll-soon-know\", \"statistics\": {\"tracks\": {\"favorited\": 6, \"total\": 195}, \"followers\": 31}, \"title\": \"You'll Soon Know\", \"url\": \"http://youllsoonknow.us/\", \"profiles\": {\"twitter\": \"@Youllsoonknow\", \"facebook\": \"http://www.facebook.com/youllsoonknow\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:645?api-key=<api-key>\", \"genres\": [\"remix\", \"electronic\", \"funk\"]}, {\"about\": \"London based online magazine focused on electronic music and visual art.\", \"updated_at\": \"2012-09-23T00:35:23\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/4294/invertedaudio_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 4294, \"permalink\": \"inverted-audio\", \"statistics\": {\"tracks\": {\"favorited\": 7, \"total\": 142}, \"followers\": 33}, \"title\": \"Inverted Audio\", \"url\": \"http://www.inverted-audio.com/\", \"profiles\": {\"twitter\": \"@InvertedAudio\", \"facebook\": \"http://www.facebook.com/InvertedAudio\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:4294?api-key=<api-key>\", \"genres\": [\"electronic\", \"house\", \"deep house\"]}, {\"about\": \"Blog posts and feature articles from Mad Decent\", \"updated_at\": \"2012-09-23T10:27:36\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/25/maddecent_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 25, \"permalink\": \"mad-decent-blog\", \"statistics\": {\"tracks\": {\"favorited\": 37, \"total\": 609}, \"followers\": 183}, \"title\": \"Mad Decent Blog\", \"url\": \"http://maddecent.com/blog\", \"profiles\": {\"twitter\": \"@maddecent\", \"facebook\": \"http://www.facebook.com/maddecent\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:25?api-key=<api-key>\", \"genres\": [\"remix\", \"electronic\", \"moombahton\"]}, {\"about\": \"It's about living with soundness of mind in an electronic age.\", \"updated_at\": \"2012-09-22T23:40:52\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/741/keytarsandviolins_large.png\", \"width\": 240, \"height\": 240}], \"id\": 741, \"permalink\": \"keytars-violins\", \"statistics\": {\"tracks\": {\"favorited\": 27, \"total\": 655}, \"followers\": 41}, \"title\": \"Keytars & Violins\", \"url\": \"http://keytarsandviolins.blogspot.com/\", \"profiles\": {\"twitter\": \"@leightonkv\", \"facebook\": null}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:741?api-key=<api-key>\", \"genres\": [\"electronic\", \"dubstep\", \"acid\"]}, {\"about\": \"An audio diary.\", \"updated_at\": \"2012-09-23T15:05:21\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/1530/electricadolescence_large.png\", \"width\": 240, \"height\": 240}], \"id\": 1530, \"permalink\": \"electric-adolescence\", \"statistics\": {\"tracks\": {\"favorited\": 20, \"total\": 328}, \"followers\": 26}, \"title\": \"Electric Adolescence\", \"url\": \"http://www.electricadolescence.com\", \"profiles\": {\"twitter\": null, \"facebook\": null}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:1530?api-key=<api-key>\", \"genres\": [\"classic rock\", \"electronic\", \"space rock\"]}, {\"about\": \"Awesome Tapes From Africa\", \"updated_at\": \"2012-09-22T23:50:08\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/527/awesometapesfromafrica_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 527, \"permalink\": \"awesome-tapes-from-africa\", \"statistics\": {\"tracks\": {\"favorited\": 5, \"total\": 267}, \"followers\": 77}, \"title\": \"Awesome Tapes from Africa\", \"url\": \"http://www.awesometapes.com/\", \"profiles\": {\"twitter\": \"@awesometapes\", \"facebook\": \"http://www.facebook.com/awesometapesfromafrica\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:527?api-key=<api-key>\", \"genres\": [\"world\", \"mixtape\", \"jazz\"]}, {\"about\": \"Waxidermy is one of the web's premier weblogs featuring obscure and out-of-print vinyl recordings. The site has been online for over 5 years, and has close to 1,000 reviews in its ever-growing database.\", \"updated_at\": \"2012-09-23T15:05:14\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/26/waxidermy_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 26, \"permalink\": \"waxidermy\", \"statistics\": {\"tracks\": {\"favorited\": null, \"total\": 32}, \"followers\": 32}, \"title\": \"Waxidermy\", \"url\": \"http://waxidermy.com\", \"profiles\": {\"twitter\": \"@waxidermy\", \"facebook\": \"http://www.facebook.com/group.php?gid=4994585851\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:26?api-key=<api-key>\", \"genres\": [\"south korea\", \"wilson and wickham\", \"likely story\"]}, {\"about\": \"A daily-curated musical selection.\", \"updated_at\": \"2012-09-23T15:05:16\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/1576/avant-avant_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 1576, \"permalink\": \"avant-avant\", \"statistics\": {\"tracks\": {\"favorited\": 27, \"total\": 422}, \"followers\": 80}, \"title\": \"Avant-Avant\", \"url\": \"http://avant-avant.net\", \"profiles\": {\"twitter\": \"@avant_avant\", \"facebook\": \"http://www.facebook.com/pages/Avant-Avant/339977747660\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:1576?api-key=<api-key>\", \"genres\": [\"lo-fi\", \"electronic\", \"remix\"]}, {\"about\": \"THINk MUSIK! \\u2605 we \\u2112\\u2134\\u0475\\u212f Disco, Indie Rock & Electronic Music.\\r\\n\\r\\nWe\\u2019re a bunch of people living in Mexico City looking for more cool people from all around the world.\\r\\n\\r\\nWe\\u2019ve set up an agency that focuses mainly in producing music events and parties that currently dictate some of the tendencies in Mexico City, we usually work with different kinds of people, including friends and partners while others simply join us for single projects.\\r\\n\", \"updated_at\": \"2012-09-23T15:14:13\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/4320/rocketsmusik_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 4320, \"permalink\": \"rocket-musik\", \"statistics\": {\"tracks\": {\"favorited\": 23, \"total\": 272}, \"followers\": 32}, \"title\": \"Rocket Musik\", \"url\": \"http://rocketsmusik.com/\", \"profiles\": {\"twitter\": \"@ROCKETSmusik\", \"facebook\": \"http://www.facebook.com/rocketsmusik\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:4320?api-key=<api-key>\", \"genres\": [\"electronic\", \"remix\", \"indie\"]}, {\"about\": \"Tiny Mix Tapes is an online music and film magazine with news, reviews, features, and hot replica watches.\", \"updated_at\": \"2012-09-23T15:05:12\", \"images\": [{\"url\": \"http://assets.shuffler.fm/feeds/589/tinymixtapes_large.jpg\", \"width\": 240, \"height\": 240}], \"id\": 589, \"permalink\": \"tiny-mix-tapes\", \"statistics\": {\"tracks\": {\"favorited\": 43, \"total\": 1116}, \"followers\": 208}, \"title\": \"Tiny Mix Tapes\", \"url\": \"http://www.tinymixtapes.com/\", \"profiles\": {\"twitter\": \"@tinymixtapes\", \"facebook\": \"http://www.facebook.com/tinymixtapes\"}, \"channel_url\": \"http://api.shuffler.fm/v1/channels/blog:589?api-key=<api-key>\", \"genres\": [\"experimental\", \"electronic\", \"indie\"]}]"
+    http_version: 
+  recorded_at: Sun, 23 Sep 2012 16:52:12 GMT
+- request: 
+    method: get
+    uri: http://api.shuffler.fm/v1/blogs?api-key=<api-key>&page=2&filter=featured
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: {}
+
+  response: 
+    status: 
+      code: 200
+      message: 
+    headers: 
+      content-type: 
+      - application/json
+      content-length: 
+      - "2"
+      server: 
+      - TornadoServer/2.4
+    body: 
+      encoding: US-ASCII
+      string: "[]"
+    http_version: 
+  recorded_at: Sun, 23 Sep 2012 16:52:12 GMT
+- request: 
+    method: get
+    uri: http://api.shuffler.fm/v1/blogs?api-key=<api-key>&q=queen&page=1
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: {}
+
+  response: 
+    status: 
+      code: 200
+      message: 
+    headers: 
+      content-type: 
+      - application/json
+      content-length: 
+      - "2"
+      server: 
+      - TornadoServer/2.4
+    body: 
+      encoding: US-ASCII
+      string: "[]"
+    http_version: 
+  recorded_at: Sun, 23 Sep 2012 16:52:12 GMT
+- request: 
+    method: get
+    uri: http://api.shuffler.fm/v1/blogs?api-key=<api-key>&q=queen&page=3
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: {}
+
+  response: 
+    status: 
+      code: 200
+      message: 
+    headers: 
+      content-type: 
+      - application/json
+      content-length: 
+      - "2"
+      server: 
+      - TornadoServer/2.4
+    body: 
+      encoding: US-ASCII
+      string: "[]"
+    http_version: 
+  recorded_at: Sun, 23 Sep 2012 16:52:13 GMT
 recorded_with: VCR 2.2.5

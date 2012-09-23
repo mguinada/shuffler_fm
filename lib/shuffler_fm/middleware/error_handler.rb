@@ -18,6 +18,8 @@ module ShufflerFM
           raise ShufflerFM::NotAcceptable, error_message(response)
         when 422
           raise ShufflerFM::UnprocessableEntity, error_message(response)
+        when 429
+          raise ShufflerFM::TooManyRequests, error_message(response)
         when 500
           raise ShufflerFM::InternalServerError, error_message(response)
         when 501
@@ -29,9 +31,17 @@ module ShufflerFM
         end
       end
 
+      private
       def error_message(response)
-        msg = response[:body].nil? ? "" : response[:body]
-        msg = "The requested URL was not found on the server." if response[:status].to_i == 404
+        msg = case response[:status].to_i
+        when 400
+          "The requested URL was not found on the server."
+        when 429
+          "Hourly rate-limit exceded."
+        else
+          response[:body].nil? ? "" : response[:body]
+        end
+
         "#{response[:method].to_s.upcase} #{response[:url].to_s}: #{response[:status]} #{msg}"
       end
     end
