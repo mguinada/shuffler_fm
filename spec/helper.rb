@@ -21,7 +21,6 @@ rescue Errno::ENOENT
   KEY = 'No-Key'
 end
 
-
 # setup VCR
 VCR.configure do |cfg|
   cfg.filter_sensitive_data('<api-key>') { KEY }
@@ -33,4 +32,8 @@ end
 # add VCR macros to rspec
 RSpec.configure do |cfg|
   cfg.extend VCR::RSpec::Macros
+end
+
+def fixture(filename)
+  File.new(File.expand_path("../fixtures/#{filename}", __FILE__))
 end
