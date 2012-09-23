@@ -15,6 +15,10 @@ Ruby API wrapper for [shuffler.fm API](http://developers.shuffler.fm/)
 This project is not at is productive state yet. Not all of shuffler.fm API is implemented
 and current implementation may be subject of change.
 
+## Documentation
+
+[API Reference](http://rdoc.info/github/mguinada/shuffler_fm)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -95,12 +99,12 @@ end
 1. Fork it
 2. Create your topic branch (`git checkout -b my-topic-branch`)
 3. Add/change specs for your unimplemented feature or bug fix.
-4. Make sure specs fail ('bundle exec rake spec'). If not return to step 3
+4. Make sure specs fail by runnig `bundle exec rake spec`. If not return to step 3
 5. Hack it
-6. Make sure specs pass ('bundle exec rake spec'). If not return to step 5
+6. Make sure specs pass (`bundle exec rake spec`). If not return to step 5
 7. Do not change the version number, we will do that
 8. Add documentation for your feature or fix
-9. Run `bundle exec rake yard`.
+9. Run `bundle exec rake yard` and review the documentation.
 10. Commit your changes (`git commit -am 'Add some feature/fix'`)
 11. Push to the branch (`git push origin my-topic-branch`)
 12. Submit a pull request for your branch
