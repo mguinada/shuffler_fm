@@ -80,6 +80,7 @@ module ShufflerFM
         if (query = Array(args[1..-1])).nil?
           raise ArgumentError, "query value(s) must be provided"
         end
+
         return args.first.to_sym, query, query.last.is_a?(Hash) ? query.pop : {}
       end
     end
