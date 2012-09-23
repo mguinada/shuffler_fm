@@ -1,0 +1,8 @@
+language: ruby
+script: bundle exec rake --verbose --trace
+rvm:
+  - 1.9.2
+  - 1.9.3
+#  - ree
+  - rbx-19mode
+#  - jruby-19mode # JRuby in 1.9 mode

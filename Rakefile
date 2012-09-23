@@ -2,8 +2,8 @@ require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
 require 'yard'
 
-task default: 'spec'
-task test:    'spec'
+task :test =>    :spec
+task :default => :spec
 
 RSpec::Core::RakeTask.new do |task|
   task.rspec_opts = ["-c", "-f documentation", "-r ./spec/helper.rb"]

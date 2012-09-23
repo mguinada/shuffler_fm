@@ -1,4 +1,8 @@
-# ShufflerFm
+# ShufflerFM  [![Build Status](https://secure.travis-ci.org/mguinada/shuffler_fm.png?branch=master)][travis] [![Dependency Status](https://gemnasium.com/mguinada/shuffler_fm.png?travis)][gemnasium] [![Code Climate](https://codeclimate.com/badge.png)][codeclimate]
+
+[travis]: http://travis-ci.org/mguinada/shuffler_fm
+[gemnasium]: https://gemnasium.com/mguinada/shuffler_fm
+[codeclimate]: https://codeclimate.com/github/mguinada/shuffler_fm
 
 Ruby API wrapper for [shuffler.fm API](http://developers.shuffler.fm/)
 

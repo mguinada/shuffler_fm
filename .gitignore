@@ -5,7 +5,6 @@
 .yardoc
 .rvmrc
 .sublime
-spec/fixtures/vcr_cassettes
 config.yml
 Gemfile.lock
 InstalledFiles

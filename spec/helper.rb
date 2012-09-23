@@ -17,16 +17,15 @@ begin
   raise "Couldn't find a key" if cfg['key'].nil?
   KEY = cfg['key']
 rescue Errno::ENOENT
-  puts "Couldn't find a configuration."
-  exit(-1)
+  puts "NOTICE: no configuration test key configured."
+  KEY = 'No-Key'
 end
 
 
 # setup VCR
 VCR.configure do |cfg|
   cfg.filter_sensitive_data('<api-key>') { KEY }
-  cfg.default_cassette_options = { :record => :new_episodes,
-                                   :re_record_interval => 7 * 24 * 60 * 60 }
+  cfg.default_cassette_options = { :record => :new_episodes }
   cfg.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   cfg.hook_into :webmock
 end

@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["mguinada@gmail.com"]
   gem.description   = %q{ Ruby API wrapper for http://shuffler.fm }
   gem.summary       = %q{ shuffler_fm wraps shuffler.fm's REST api on a thin layer of ruby. }
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/mguinada/shuffler_fm"
   gem.date          = Time.now.utc.strftime("%Y-%m-%d")
 
   gem.files         = `git ls-files`.split($/)
@@ -25,6 +25,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'multi_json',         '~> 1.3'
 
   #development
+  gem.add_development_dependency 'rake'
   gem.add_development_dependency 'pry'
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'webmock'
