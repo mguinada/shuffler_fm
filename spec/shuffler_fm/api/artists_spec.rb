@@ -19,7 +19,7 @@ describe ShufflerFM::API::Artists do
   end
 
   it 'searches for an artist' do
-    api.search_artist('queen').should be_a(Array)
-    api.search_artist('queen', page: 3).should be_a(Array)
+    api.search_artists('queen').should be_a(Array)
+    api.search_artists('queen', page: 3).should be_a(Array)
   end
 end

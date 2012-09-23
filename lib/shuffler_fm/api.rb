@@ -2,6 +2,7 @@ require 'shuffler_fm/http'
 require 'shuffler_fm/request'
 require 'shuffler_fm/errors'
 
+require 'shuffler_fm/api/blogs'
 require 'shuffler_fm/api/tracks'
 require 'shuffler_fm/api/artists'
 require 'shuffler_fm/api/channels'
@@ -14,6 +15,7 @@ module ShufflerFM
     include ShufflerFM::HTTP
     include ShufflerFM::Request
 
+    include ShufflerFM::API::Blogs
     include ShufflerFM::API::Tracks
     include ShufflerFM::API::Artists
     include ShufflerFM::API::Channels

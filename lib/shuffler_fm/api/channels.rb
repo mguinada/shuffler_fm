@@ -1,6 +1,6 @@
 module ShufflerFM
   class API
-    # Operations on shuffler.fm channels
+    # Shuffler.fm API operations over channels
     module Channels
       # Reads the media channels activity stream
       #

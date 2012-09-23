@@ -1,8 +1,8 @@
 module ShufflerFM
   class API
-    # Operations on shuffler.fm artists
+    # Shuffler.fm API operations over artists
     module Artists
-      # Requests a list of all artists
+      # Requests a list of artists
       #
       # @param [Hash] options
       # @option options [Integer] :page The page to request on paginated operation responses
@@ -37,7 +37,7 @@ module ShufflerFM
         get("artists/#{Integer(id)}/blogs", page: page(options))
       end
 
-      # Search for an artist
+      # Search artists
       #
       # @param [String] q your query
       # @param [Hash] options
@@ -45,9 +45,8 @@ module ShufflerFM
       #
       # @return [Array] an array of results
       #
-      def search_artist(q, options = {})
-        raise ArgumentError, "Needs to be provided with a query" if q.nil?
-        get("/artists?q=#{String(q.split.join('+'))}", page: page(options))
+      def search_artists(q, options = {})
+        get("/artists?q=#{String(q)}", page: page(options))
       end
     end
   end

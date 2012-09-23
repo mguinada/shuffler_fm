@@ -1,8 +1,8 @@
 module ShufflerFM
   class API
-    # Operations on shuffler.fm tracks
+    # Shuffler.fm API operations over tracks
     module Tracks
-      # Requests a list of all tracks
+      # Requests a list of tracks
       #
       # @param [Hash] options
       # @option options [Integer] :page The page to request on paginated operation responses
