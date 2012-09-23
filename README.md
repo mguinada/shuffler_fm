@@ -51,7 +51,7 @@ api = ShufflerFM.api('YOUR-KEY')
 # list tracks
 tracks = api.tracks
 
-[#<Hashie::Rash blog=#<Hashie::Rash about=\"\" channel_url=\"http://api.shuffler.fm/v1/channels/blog:963?api-key=8ivutyt47ehvhl0kiebh\" genres=[\"indie\", \"folk\", \"singer-songwriter\"] id=963 images=[#<Hashie::Rash height=240 url=\"http://assets.shuffler.fm/feeds/963/argeheartedboy_large.jpg\" width=240>] permalink=\"largehearted-boy\" profiles=#<Hashie::Rash facebook=nil twitter=nil> ...
+[#<Hashie::Rash blog=#<Hashie::Rash about=\"\" channel_url=\"http://api.shuffler.fm/v1/channels/blog:963?api-key=YOUR-KEY\" genres=[\"indie\", \"folk\", \"singer-songwriter\"] id=963 images=[#<Hashie::Rash height=240 url=\"http://assets.shuffler.fm/feeds/963/argeheartedboy_large.jpg\" width=240>] permalink=\"largehearted-boy\" profiles=#<Hashie::Rash facebook=nil twitter=nil> ...
 
 # list operations are paginated
 tracks = api.tracks(page: 2)
