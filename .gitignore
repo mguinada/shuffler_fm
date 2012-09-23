@@ -10,6 +10,7 @@ Gemfile.lock
 InstalledFiles
 _yardoc
 coverage
+smoke
 doc/
 lib/bundler/man
 pkg

@@ -1,3 +1,3 @@
 module ShufflerFM
-  VERSION = "0.0.1beta"
+  VERSION = "0.0.1alpha"
 end

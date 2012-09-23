@@ -8,7 +8,7 @@ describe ShufflerFM::API::Tracks do
     api.tracks(page: 2).size.should be(50)
   end
 
-  it 'reads a specific track' do
+  it 'requests a specific track' do
     api.track(1).should be_a(Hashie::Mash)
     api.track(0).should be_nil
   end

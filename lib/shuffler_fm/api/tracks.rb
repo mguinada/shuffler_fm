@@ -10,12 +10,12 @@ module ShufflerFM
       # @return [Array] a list of tracks
       #
       # @example
-      #   tracks = api.tracks           #first page
+      #   tracks = api.tracks #first page
       #   #...
       #   tracks = api.tracks(page: 2)
       #
       def tracks(options = {})
-        get("/tracks", page: Integer(options.fetch(:page) { 1 }))
+        get("/tracks", page: page(options))
       end
 
       # Requests a particular track

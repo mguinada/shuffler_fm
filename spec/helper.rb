@@ -17,7 +17,7 @@ begin
   raise "Couldn't find a key" if cfg['key'].nil?
   KEY = cfg['key']
 rescue Errno::ENOENT
-  puts "NOTICE: no configuration test key configured."
+  puts "NOTICE: no key configured."
   KEY = 'No-Key'
 end
 

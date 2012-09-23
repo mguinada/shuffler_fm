@@ -3,6 +3,7 @@ require 'shuffler_fm/request'
 require 'shuffler_fm/errors'
 
 require 'shuffler_fm/api/tracks'
+require 'shuffler_fm/api/artists'
 require 'shuffler_fm/api/channels'
 
 module ShufflerFM
@@ -14,6 +15,7 @@ module ShufflerFM
     include ShufflerFM::Request
 
     include ShufflerFM::API::Tracks
+    include ShufflerFM::API::Artists
     include ShufflerFM::API::Channels
 
     class << self
@@ -48,6 +50,11 @@ module ShufflerFM
     def initialize(key)
       raise ArgumentError, 'An API key must be provided' if key.nil?
       @key = key
+    end
+
+    private
+    def page(options)
+      Integer(options.fetch(:page) { 1 })
     end
   end
 end
