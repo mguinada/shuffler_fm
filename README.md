@@ -90,7 +90,7 @@ end
 1. Fork it
 2. Create your topic branch (`git checkout -b my-topic-branch`)
 3. Add/change specs for your unimplemented feature or bug fix
-4. Make sure specs fail by runnig `bundle exec rake spec`. If not return to step 3
+4. Make sure specs fail by running `bundle exec rake spec`. If not return to step 3
 5. Hack it
 6. Make sure specs pass (`bundle exec rake spec`). If not return to step 5
 7. Edit the documentation so it is coherent with your feature or fix. Run `bundle exec rake yard` to review
