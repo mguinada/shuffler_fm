@@ -10,7 +10,7 @@ module ShufflerFM
       # @return [Array] a list of blogs
       #
       def blogs(options = {})
-        get("/blogs", page: page(options))
+        get("/blogs", :page => page(options))
       end
 
       # Requests a list of featured blogs
@@ -21,7 +21,7 @@ module ShufflerFM
       # @return [Array] a list of featured blogs
       #
       def featured_blogs(options = {})
-        get("/blogs", page: page(options), filter: 'featured')
+        get("/blogs", :page => page(options), :filter => 'featured')
       end
 
       # Requests a particular blog
@@ -45,7 +45,7 @@ module ShufflerFM
       # @return [Array] an array of results
       #
       def search_blogs(q, options = {})
-        get("/blogs?q=#{String(q)}", page: page(options))
+        get("/blogs?q=#{String(q)}", :page => page(options))
       end
     end
   end

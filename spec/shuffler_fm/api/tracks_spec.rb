@@ -5,7 +5,7 @@ describe ShufflerFM::API::Tracks do
 
   it 'lists tracks' do
     api.tracks.size.should be(50)
-    api.tracks(page: 2).size.should be(50)
+    api.tracks(:page => 2).size.should be(50)
   end
 
   it 'requests a specific track' do

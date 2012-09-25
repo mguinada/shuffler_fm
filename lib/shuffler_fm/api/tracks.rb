@@ -15,7 +15,7 @@ module ShufflerFM
       #   tracks = api.tracks(page: 2)
       #
       def tracks(options = {})
-        get("/tracks", page: page(options))
+        get("/tracks", :page => page(options))
       end
 
       # Requests a particular track

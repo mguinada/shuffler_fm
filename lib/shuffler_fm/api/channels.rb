@@ -65,7 +65,7 @@ module ShufflerFM
       private
       def channel(*args)
         key, query, opts = process_args(args)
-        get((key == :genre ? "channels/" : "channels/#{key}:") << "#{String(query.join('+'))}", page: page(opts))
+        get((key == :genre ? "channels/" : "channels/#{key}:") << "#{String(query.join('+'))}", :page => page(opts))
       rescue ShufflerFM::NotFound
         []
       end
