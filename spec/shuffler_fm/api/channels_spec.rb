@@ -13,11 +13,11 @@ describe ShufflerFM::API::Channels do
     end
 
     it 'artists' do
-      api.artist_channels('Pixies', page: 2).should be_a(Array)
+      api.artist_channels('Pixies', :page => 2).should be_a(Array)
     end
 
     it 'genre' do
-      api.genre_channels('punk', 'rock', page: 2).should be_a(Array)
+      api.genre_channels('punk', 'rock', :page => 2).should be_a(Array)
     end
   end
 end

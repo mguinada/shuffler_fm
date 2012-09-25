@@ -4,15 +4,10 @@ http_interactions:
     method: get
     uri: http://api.shuffler.fm/v1/tracks?api-key=NO-SUCH-KEY&page=1
     body: 
-      encoding: US-ASCII
       string: ""
     headers: 
-      Accept-Encoding: 
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept: 
       - "*/*"
-      User-Agent: 
-      - Ruby
   response: 
     status: 
       code: 403
@@ -25,8 +20,7 @@ http_interactions:
       Server: 
       - TornadoServer/2.4
     body: 
-      encoding: US-ASCII
       string: That API-key is invalid my dear friend.
     http_version: 
-  recorded_at: Thu, 20 Sep 2012 21:35:18 GMT
+  recorded_at: Tue, 25 Sep 2012 20:54:36 GMT
 recorded_with: VCR 2.2.5

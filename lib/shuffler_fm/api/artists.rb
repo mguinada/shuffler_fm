@@ -10,7 +10,7 @@ module ShufflerFM
       # @return [Array] a list of artists
       #
       def artists(options = {})
-        get("/artists", page: page(options))
+        get("/artists", :page => page(options))
       end
 
       # Requests a particular artist
@@ -34,7 +34,7 @@ module ShufflerFM
       # @return [Array] an array of results
       #
       def artist_blogs(id, options= {})
-        get("artists/#{Integer(id)}/blogs", page: page(options))
+        get("artists/#{Integer(id)}/blogs", :page => page(options))
       end
 
       # Search artists
@@ -46,7 +46,7 @@ module ShufflerFM
       # @return [Array] an array of results
       #
       def search_artists(q, options = {})
-        get("/artists?q=#{String(q)}", page: page(options))
+        get("/artists?q=#{String(q)}", :page => page(options))
       end
     end
   end

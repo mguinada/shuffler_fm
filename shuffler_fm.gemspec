@@ -25,6 +25,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'multi_json',         '~> 1.3'
 
   #development
+  gem.add_development_dependency 'json'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'pry'
   gem.add_development_dependency 'rspec'

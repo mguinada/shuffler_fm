@@ -11,13 +11,15 @@ describe ShufflerFM do
         cfg.proxy              = 'http://192.168.1.1:8080'
       end
 
-      ShufflerFM.configuration.values.should eq(connection_timeout: 1,
-                                                read_timeout: 5,
-                                                proxy: 'http://192.168.1.1:8080')
+      ShufflerFM.configuration.values.should eq(:connection_timeout => 1,
+                                                :read_timeout => 5,
+                                                :proxy => 'http://192.168.1.1:8080')
     end
 
     it 'with a hash' do
-      ShufflerFM.api(KEY, connection_timeout: 2, read_timeout: 3, proxy: 'http://127.0.0.1:8888')
+      ShufflerFM.api(KEY, :connection_timeout => 2,
+                          :read_timeout => 3,
+                          :proxy => 'http://127.0.0.1:8888')
 
       ShufflerFM.configuration.connection_timeout.should eq(2)
       ShufflerFM.configuration.read_timeout.should eq(3)
