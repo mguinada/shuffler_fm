@@ -6,6 +6,7 @@ require 'shuffler_fm/api/blogs'
 require 'shuffler_fm/api/tracks'
 require 'shuffler_fm/api/artists'
 require 'shuffler_fm/api/channels'
+require 'shuffler_fm/api/charts'
 
 module ShufflerFM
   class API
@@ -19,6 +20,7 @@ module ShufflerFM
     include ShufflerFM::API::Tracks
     include ShufflerFM::API::Artists
     include ShufflerFM::API::Channels
+    include ShufflerFM::API::Charts
 
     class << self
       # @!attribute [r] base_uri

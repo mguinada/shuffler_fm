@@ -3,7 +3,7 @@
 [travis]: http://travis-ci.org/mguinada/shuffler_fm
 [codeclimate]: https://codeclimate.com/github/mguinada/shuffler_fm
 
-Ruby API wrapper for [shuffler.fm API](http://developers.shuffler.fm/)
+Ruby API wrapper for [shuffler.fm v1 API](http://developers.shuffler.fm/)
 
 ## Notice
 
@@ -73,12 +73,30 @@ api.search_artists('radiohead').map(&:name)
 
 activity = []
 api.genre_channels('punk', 'rock').each do |act|
-  activity << "#{act.verb} on #{act.actor.title} refering music track #{act.object.metadata.title}"
+  activity << "#{act.verb.capitalize} on #{act.actor.title} refering music track #{act.object.metadata.title}"
 end
-=> ["Post at The KEXP Blog refering music track Sunshine/Pretty Girls (Live on KEXP)",
-    "Post at PropertyOfZack refering music track Always Summer (Live Video)",
-    "Post at Nialler9 Music Blog refering music track Honningbarna (2012)",
-    "Post at This Is Fake DIY refering music track Coffin Song", ...
+
+activity
+=> ["Post on The KEXP Blog refering music track Sunshine/Pretty Girls (Live on KEXP)",
+    "Post on PropertyOfZack refering music track Always Summer (Live Video)",
+    "Post on Nialler9 Music Blog refering music track Honningbarna (2012)",
+    "Post on This Is Fake DIY refering music track Coffin Song", ...
+```
+
+and more ...
+
+### Configuration
+```ruby
+
+ShufflerFM.configure do |config|
+  config.connection_timeout = 1 #seconds
+  config.read_timeout       = 5 #seconds
+  config.proxy              = { uri: 'http://192.168.1.1:8080', user: 'user1', password: 'passwd'}
+end
+
+#or
+
+api = ShufflerFM.api("your-api-key", connection_timeout: 1, read_timeout: 5, proxy: 'http://192.168.1.1:8080')
 ```
 
 ## Reference
