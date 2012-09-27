@@ -5,6 +5,7 @@ require 'shuffler_fm/middleware/error_handler'
 module ShufflerFM
   # @private
   module HTTP
+    private
     def connection
       options = {:url => ShufflerFM::API.base_uri,
                  :params => {'api-key' => key}}.merge(ShufflerFM.configuration.values)

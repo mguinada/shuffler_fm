@@ -14,7 +14,7 @@ module ShufflerFM
     end
 
     private
-    def request(method, path, options = {}, &block)
+    def request(method, path, options = {})
       response = http_connection.send(method) do |request|
         request.url("#{API.version}/#{path}", options)
       end
