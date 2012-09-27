@@ -117,7 +117,7 @@ api = ShufflerFM.api("your-api-key", connection_timeout: 1, read_timeout: 5, pro
 
 ## Influence
 
-This API wrapper design is strongly influenced by [Wynn Netherland's](https://github.com/pengwynn) [Ocktokit gem](https://github.com/pengwynn/octokit)
+This API wrapper design is strongly influenced by the [Ocktokit gem](https://github.com/pengwynn/octokit)
 
 ## Copyright
 Copyright (c) 2012 Miguel Guinada
