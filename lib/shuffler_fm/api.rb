@@ -7,11 +7,12 @@ require 'shuffler_fm/api/tracks'
 require 'shuffler_fm/api/artists'
 require 'shuffler_fm/api/channels'
 require 'shuffler_fm/api/charts'
+require 'shuffler_fm/api/genres'
 
 module ShufflerFM
   class API
-    BASE_URI = 'http://api.shuffler.fm/'
-    VERSION  = 'v1'
+    @base_uri = 'http://api.shuffler.fm/'
+    @version  = 'v1'
 
     include ShufflerFM::HTTP
     include ShufflerFM::Request
@@ -21,21 +22,10 @@ module ShufflerFM
     include ShufflerFM::API::Artists
     include ShufflerFM::API::Channels
     include ShufflerFM::API::Charts
+    include ShufflerFM::API::Genres
 
     class << self
-      # @!attribute [r] base_uri
-      #   The REST API endpoint
-      #
-      def base_uri
-        BASE_URI
-      end
-
-      # @!attribute [r] version
-      #   The API version
-      #
-      def version
-        VERSION
-      end
+      attr_reader :base_uri, :version
     end
 
     # @!attribute [rw] key
