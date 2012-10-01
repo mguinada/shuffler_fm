@@ -5,11 +5,6 @@
 
 Ruby API wrapper for [shuffler.fm v1 API](http://developers.shuffler.fm/)
 
-## Notice
-
-For the moment this project is not at it's productive stage. Not all of shuffler.fm API is implemented
-and current implementation may be subject of change.
-
 ## Installation
 
 Add this line to your application's Gemfile:
