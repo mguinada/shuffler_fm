@@ -4,12 +4,12 @@ module ShufflerFM
       # Requests a list of genres
       #
       # @param [Hash] options
-      # @option options [Integer] :page The page to request on paginated operation responses
+      # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
       #
       # @return [Array] a list of genres
       #
       def genres(options = {})
-        get("/genres", :page => page(options))
+        get("/genres", options)
       end
 
       # Requests a particular genre

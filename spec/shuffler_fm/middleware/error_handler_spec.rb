@@ -18,7 +18,7 @@ describe ShufflerFM::Middleware::ErrorHandler do
       let!(:api) { ShufflerFM::API.new(KEY) }
 
       before(:each) do
-        stub_request(:get, "http://api.shuffler.fm/v1/tracks?api-key=#{KEY}&page=1").to_return(:status => status)
+        stub_request(:get, "http://api.shuffler.fm/v1/tracks?api-key=#{KEY}&page=0").to_return(:status => status)
       end
 
       it "should raise #{error.name}" do

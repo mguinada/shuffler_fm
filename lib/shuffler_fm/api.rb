@@ -45,10 +45,5 @@ module ShufflerFM
       raise ArgumentError, 'An API key must be provided' if key.nil?
       @key = key
     end
-
-    private
-    def page(options)
-      Integer(options.fetch(:page) { 1 })
-    end
   end
 end

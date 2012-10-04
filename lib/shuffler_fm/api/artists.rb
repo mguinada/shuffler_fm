@@ -5,12 +5,13 @@ module ShufflerFM
       # Requests a list of artists
       #
       # @param [Hash] options
-      # @option options [Integer] :page The page to request on paginated operation responses
+      # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
+      # @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
       #
       # @return [Array] a list of artists
       #
       def artists(options = {})
-        get("/artists", :page => page(options))
+        get("/artists", options)
       end
 
       # Requests a particular artist
@@ -29,24 +30,25 @@ module ShufflerFM
       #
       # @param [Integer] id the artist id
       # @param [Hash] options
-      # @option options [Integer] :page The page to request on paginated operation responses
+      # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
+      # @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
       #
       # @return [Array] an array of results
       #
       def artist_blogs(id, options= {})
-        get("artists/#{Integer(id)}/blogs", :page => page(options))
+        get("artists/#{Integer(id)}/blogs", options)
       end
 
       # Search artists
       #
       # @param [String] q your query
       # @param [Hash] options
-      # @option options [Integer] :page The page to request on paginated operation responses
+      # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
       #
       # @return [Array] an array of results
       #
       def search_artists(q, options = {})
-        get("/artists?q=#{String(q)}", :page => page(options))
+        get("/artists?q=#{String(q)}", options)
       end
     end
   end

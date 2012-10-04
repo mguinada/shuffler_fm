@@ -16,10 +16,16 @@ module ShufflerFM
     private
     def request(method, path, options = {})
       response = http_connection.send(method) do |request|
-        request.url("#{API.version}/#{path}", options)
+        request.url("#{API.version}/#{path}", process_options(options))
       end
 
       response.body
+    end
+
+    def process_options(options)
+      #shuffler.fm REST API v1 determins the the first page on a paginated resource is 0.
+      #We are abstracting that to start on page 1.
+      options.merge(:page => Integer(options.delete(:page) { 1 }) - 1)
     end
   end
 end

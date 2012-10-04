@@ -5,7 +5,8 @@ module ShufflerFM
       # Requests a list of tracks
       #
       # @param [Hash] options
-      # @option options [Integer] :page The page to request on paginated operation responses
+      # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
+      # @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
       #
       # @return [Array] a list of tracks
       #
@@ -15,7 +16,7 @@ module ShufflerFM
       #   tracks = api.tracks(page: 2)
       #
       def tracks(options = {})
-        get("/tracks", :page => page(options))
+        get("/tracks", options)
       end
 
       # Requests a particular track

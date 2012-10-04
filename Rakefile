@@ -19,10 +19,12 @@ task :console do
   end
 end
 
-desc "Generate documentation"
-YARD::Rake::YardocTask.new do |t|
-  t.files   = ['lib/**/*.rb']
-  t.options = ['--no-private', '--protected', '--markup', 'markdown']
+namespace :doc do
+  desc "Generate documentation"
+  YARD::Rake::YardocTask.new do |t|
+    t.files   = ['lib/**/*.rb']
+    t.options = ['--no-private', '--protected', '--markup', 'markdown']
+  end
 end
 
 #

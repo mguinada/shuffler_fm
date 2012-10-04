@@ -7,7 +7,8 @@ module ShufflerFM
       # @param [String] key The channel key.
       #    Can be on of the following: mp3, youtube, vimeo, soundcloud or officialfm
       # @param [Hash] options
-      # @option options [Integer] :page The page to request on paginated operation responses
+      # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
+      # @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
       #
       # @return [Array] an array with the channel's activity stream
       #
@@ -22,7 +23,8 @@ module ShufflerFM
       #
       # @param [String] key The channel key.
       # @param [Hash] options
-      # @option options [Integer] :page The page to request on paginated operation responses
+      # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
+      # @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
       #
       # @return [Array] an array with the channel's activity stream
       #
@@ -37,7 +39,8 @@ module ShufflerFM
       #
       # @param key The channel key.
       # @param [Hash] options
-      # @option options [Integer] :page The page to request on paginated operation responses
+      # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
+      # @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
       #
       # @return [Array] an array with the channel's activity stream
       #
@@ -65,7 +68,7 @@ module ShufflerFM
       private
       def channel(*args)
         key, query, opts = process_args(args)
-        get((key == :genre ? "channels/" : "channels/#{key}:") << "#{String(query.join('+'))}", :page => page(opts))
+        get((key == :genre ? "channels/" : "channels/#{key}:") << "#{String(query.join('+'))}", opts)
       rescue ShufflerFM::NotFound
         []
       end
