@@ -54,6 +54,9 @@ module ShufflerFM
       # Reads the genere channels activity stream.
       #
       # @param [Array] keys The channel keys.
+      # @param [Hash] options
+      # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
+      # @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
       #
       # @return [Array] an array with the channel's activity stream
       #
