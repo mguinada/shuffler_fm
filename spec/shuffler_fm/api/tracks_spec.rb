@@ -12,4 +12,8 @@ describe ShufflerFM::API::Tracks do
     api.track(1).should be_a(Hashie::Mash)
     api.track(0).should be_nil
   end
+
+  it 'requests a track stream' do
+    api.stream(1).should be_a(URI)
+  end
 end

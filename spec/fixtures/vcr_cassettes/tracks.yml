@@ -92,4 +92,33 @@ http_interactions:
       string: ""
     http_version: 
   recorded_at: Thu, 04 Oct 2012 20:57:56 GMT
+- request: 
+    method: get
+    uri: http://api.shuffler.fm/v1/tracks/1/stream?api-key=<api-key>&page=0
+    body: 
+      string: ""
+    headers: 
+      Accept: 
+      - "*/*"
+  response: 
+    status: 
+      code: 302
+      message: FOUND
+    headers: 
+      Content-Type: 
+      - text/html; charset=utf-8
+      Server: 
+      - TornadoServer/2.4
+      Location: 
+      - http://api.soundcloud.com/tracks/9598274/stream?consumer_key=WFhMwGBRy2BnBBB7IK7WiQ
+      Content-Length: 
+      - "373"
+    body: 
+      string: |-
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+        <title>Redirecting...</title>
+        <h1>Redirecting...</h1>
+        <p>You should be redirected automatically to target URL: <a href="http://api.soundcloud.com/tracks/9598274/stream?consumer_key=WFhMwGBRy2BnBBB7IK7WiQ">http://api.soundcloud.com/tracks/9598274/stream?consumer_key=WFhMwGBRy2BnBBB7IK7WiQ</a>.  If not click the link.
+    http_version: 
+  recorded_at: Mon, 08 Oct 2012 21:55:01 GMT
 recorded_with: VCR 2.2.5

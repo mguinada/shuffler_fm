@@ -6,13 +6,15 @@ module ShufflerFM
   # @private
   module HTTP
     private
-    def connection
+    def connection(managed = true)
       options = {:url => ShufflerFM::API.base_uri,
                  :params => {'api-key' => key}}.merge(ShufflerFM.configuration.values)
 
       Faraday.new(options) do |builder|
-        builder.use FaradayMiddleware::Rashify
-        builder.use FaradayMiddleware::ParseJson
+        if managed
+          builder.use FaradayMiddleware::Rashify
+          builder.use FaradayMiddleware::ParseJson
+        end
 
         builder.use ShufflerFM::Middleware::ErrorHandler
 
