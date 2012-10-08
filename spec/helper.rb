@@ -24,7 +24,7 @@ end
 # setup VCR
 VCR.configure do |cfg|
   cfg.filter_sensitive_data('<api-key>') { KEY }
-  cfg.default_cassette_options = { :record => :new_episodes, :serialize_with => :syck }
+  cfg.default_cassette_options = { :record => :new_episodes }
   cfg.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   cfg.hook_into :webmock
 end
