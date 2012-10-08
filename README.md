@@ -59,6 +59,7 @@ track.metadata.artist.name
 
 ### Search for an artist
 ```ruby
+
 api.search_artists('radiohead').map(&:name)
 => ["Radiohead", "Radiohead at Lollapalooza 2008", "REM & Radiohead", "Radiohead 6. Permanent Daylight live", "Radiohead @ Optimus Alive'12", "I Can't Take The Hurt (Johnny Cash vs Tegan and Sarah and Radiohead)"]
 ```
@@ -67,7 +68,7 @@ api.search_artists('radiohead').map(&:name)
 ```ruby
 
 activity = []
-api.genre_channels('punk', 'rock').each do |act|
+api.genre_channels('punk', 'rock', page: 1, per_page: 10).each do |act|
   activity << "#{act.verb.capitalize} on #{act.actor.title} refering music track #{act.object.metadata.title}"
 end
 

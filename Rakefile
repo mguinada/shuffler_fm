@@ -23,7 +23,7 @@ namespace :doc do
   desc "Generate documentation"
   YARD::Rake::YardocTask.new do |t|
     t.files   = ['lib/**/*.rb']
-    t.options = ['--no-private', '--protected', '--markup', 'markdown']
+    t.options = ['--no-private', '--protected', '--markup-provider', 'redcarpet', '--markup', 'markdown']
   end
 end
 
