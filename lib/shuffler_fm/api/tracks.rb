@@ -29,6 +29,18 @@ module ShufflerFM
       rescue ShufflerFM::NotFound
         nil
       end
+
+      # Streaming URI for a track.
+      #
+      # NOTE: This operation required a specific authorization form shuffler.fm
+      #
+      # @param [Integer] id The track id
+      #
+      # @return [URI] the track streaming URI if avaliable
+      #
+      def stream(id)
+        URI(get("/tracks/#{Integer(id)}/stream", {}, false).headers['location'])
+      end
     end
   end
 end
