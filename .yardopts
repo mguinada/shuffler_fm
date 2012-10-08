@@ -1,2 +1,2 @@
---no-private --protected --markup markdown lib/**/*.rb - README.md LICENSE
+--no-private --protected --markup-provider redcarpet --markup markdown lib/**/*.rb - README.md LICENSE
 

@@ -13,7 +13,7 @@ module ShufflerFM
       # @return [Array] an array with the channel's activity stream
       #
       # @example
-      #   api.media_channels('youtube', page: 2)
+      #   api.media_channels('soundcloud')
       #
       def media_channels(key, options = {})
         channel(:media, key, options)
@@ -21,7 +21,7 @@ module ShufflerFM
 
       # Reads the blog channels activity stream
       #
-      # @param [String] key The channel key.
+      # @param [Integer] key The blog id
       # @param [Hash] options
       # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
       # @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
@@ -37,7 +37,6 @@ module ShufflerFM
 
       # Reads the artist channels activity stream
       #
-      # @param key The channel key.
       # @param [Hash] options
       # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
       # @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
@@ -53,16 +52,22 @@ module ShufflerFM
 
       # Reads the genere channels activity stream.
       #
-      # @param [Array] keys The channel keys.
-      # @param [Hash] options
-      # @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
-      # @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
+      # @overload genre_channels(*keys)
+      #   @param [Array] keys The channel keys.
+      #
+      #   @example
+      #      api.genre_channels('punk')
+      #      api.genre_channels('punk', 'rock')
+      #
+      # @overload genre_channels(*keys, options)
+      #   @param [Hash] options
+      #   @option options [Integer] :page The page to request on paginated operation responses. First page is page 1.
+      #   @option options [Integer] :per_page The page size. Default is 50, maximum is 100.
+      #
+      #   @example
+      #      api.genre_channels('punk', 'rock', page: 1, per_page: 10)
       #
       # @return [Array] an array with the channel's activity stream
-      #
-      # @example
-      #    api.genre_channels('rock')
-      #    api.genre_channels('punk', 'rock', page: 2)
       #
       def genre_channels(*keys)
         channel(:genre, *keys)

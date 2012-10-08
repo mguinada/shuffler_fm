@@ -32,7 +32,7 @@ module ShufflerFM
 
       # Streaming URI for a track.
       #
-      # NOTE: This operation required a specific authorization form shuffler.fm
+      # NOTE: This operation requires a specific authorization form shuffler.fm
       #
       # @param [Integer] id The track id
       #
