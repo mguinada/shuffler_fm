@@ -1,3 +1,8 @@
+2.0.0
+-----
+
+Tracks#stream returns String insted of URI
+
 1.0.0
 -----
 
