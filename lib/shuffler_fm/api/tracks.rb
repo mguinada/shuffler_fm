@@ -36,10 +36,10 @@ module ShufflerFM
       #
       # @param [Integer] id The track id
       #
-      # @return [URI] the track streaming URI if avaliable
+      # @return [String] the track streaming URI if avaliable
       #
       def stream(id)
-        URI(get("/tracks/#{Integer(id)}/stream", {}, false).headers['location'])
+        get("/tracks/#{Integer(id)}/stream", {}, false).headers['location']
       end
     end
   end

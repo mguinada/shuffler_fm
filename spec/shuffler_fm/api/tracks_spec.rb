@@ -14,6 +14,6 @@ describe ShufflerFM::API::Tracks do
   end
 
   it 'requests a track stream' do
-    api.stream(1).should be_a(URI)
+    api.stream(1).should be_a(String)
   end
 end
