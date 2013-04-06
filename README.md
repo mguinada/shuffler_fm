@@ -119,3 +119,5 @@ Copyright (c) 2012 Miguel Guinada
 [LICENSE][] for details.
 
 [license]: https://github.com/mguinada/shuffler_fm/blob/master/LICENSE
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/4d5b0444c11faeebd8ed95edcf98f2f4 "githalytics.com")](http://githalytics.com/mguinada/shuffler_fm)
