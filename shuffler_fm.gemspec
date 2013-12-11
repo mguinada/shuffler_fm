@@ -18,20 +18,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  #package
   gem.add_dependency 'faraday',            '~> 0.8'
   gem.add_dependency 'faraday_middleware', '~> 0.8'
   gem.add_dependency 'rash',               '~> 0.3'
   gem.add_dependency 'multi_json',         '~> 1.3'
-
-  #development
-  gem.add_development_dependency 'json'
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'pry'
-  gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'webmock'
-  gem.add_development_dependency 'vcr'
-  gem.add_development_dependency 'simplecov'
-  gem.add_development_dependency 'yard'
-  gem.add_development_dependency 'maruku'
 end
